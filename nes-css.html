@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NES css (Nostalgic)</title>
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!-- use can also use Kongtext fonts -->
+    <style>
+        .fancy {
+            padding : 1em;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+
+            /* At the bottom of our background stack,
+                let's have a misty grey solid color */
+            background-color: #E4E4D9;
+
+            /* We stack linear gradients on top of each
+                other to create our color strip effect.
+                As you will notice, color gradients are
+                considered to be images and can be
+                manipulated as such */
+            background-image: 
+                linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
+                linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
+                linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
+                linear-gradient( 85deg, rgba(0,0,0,0) 92%, #b4b07f 92%),
+                linear-gradient(175deg, rgba(0,0,0,0) 85%, #c5a68e 85%),
+                linear-gradient( 85deg, rgba(0,0,0,0) 89%, #c5a68e 89%),
+                linear-gradient(175deg, rgba(0,0,0,0) 80%, #ba9499 80%),
+                linear-gradient( 85deg, rgba(0,0,0,0) 86%, #ba9499 86%),
+                linear-gradient(175deg, rgba(0,0,0,0) 75%, #9f8fa4 75%),
+                linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
+                linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
+                linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
+            }
+    </style>
+</head>
+
+<body style="font-family: 'Press Start 2P', cursive;">
+    <div class="fancy">
+        <form>
+            <fieldset>
+                <legend>Text</legend>
+                <div>
+                    <span class="nes-text is-primary">Primary</span>
+                    <span class="nes-text is-success">Success</span>
+                    <span class="nes-text is-warning">Warning</span>
+                    <span class="nes-text is-error">Error</span>
+                    <span class="nes-text is-disabled">Disabled</span>
+                </div>
+            </fieldset>
+        </form>
+
+        <a class="nes-btn">Normal</a>
+
+        <button type="button" class="nes-btn is-primary">Primary</button>
+        <button type="button" class="nes-btn is-success">Success</button>
+        <button type="button" class="nes-btn is-warning">Warning</button>
+        <button type="button" class="nes-btn is-error">Error</button>
+        <button type="button" class="nes-btn is-disabled">Disabled</button>
+
+        <section>
+            <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-default').showModal();">
+                Open dialog
+            </button>
+            <dialog class="nes-dialog" id="dialog-default">
+                <form method="dialog">
+                    <p class="title">Dialog</p>
+                    <p>Alert: this is a dialog.</p>
+                    <menu class="dialog-menu">
+                        <button class="nes-btn">Cancel</button>
+                        <button class="nes-btn is-primary">Confirm</button>
+                    </menu>
+                </form>
+            </dialog>
+        </section>
+
+        <!-- Dark dialog -->
+        <section>
+            <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark').showModal();">
+                Open dark dialog
+            </button>
+            <dialog class="nes-dialog is-dark" id="dialog-dark">
+                <form method="dialog">
+                    <p class="title">Dark dialog</p>
+                    <p>Alert: this is a dialog.</p>
+                    <menu class="dialog-menu">
+                        <button class="nes-btn">Cancel</button>
+                        <button class="nes-btn is-primary">Confirm</button>
+                    </menu>
+                </form>
+            </dialog>
+        </section>
+
+        <!-- Rounded dialog -->
+        <section>
+            <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-rounded').showModal();">
+                Open rounded dialog
+            </button>
+            <dialog class="nes-dialog is-rounded" id="dialog-rounded">
+                <form method="dialog">
+                    <p class="title">Rounded dialog</p>
+                    <p>Alert: this is a dialog.</p>
+                    <menu class="dialog-menu">
+                        <button class="nes-btn">Cancel</button>
+                        <button class="nes-btn is-primary">Confirm</button>
+                    </menu>
+                </form>
+            </dialog>
+        </section>
+
+        <!-- Dark and Rounded dialog -->
+        <section>
+            <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark-rounded').showModal();">
+                Open dark and rounded dialog
+            </button>
+            <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+                <form method="dialog">
+                    <p class="title">Dark and Rounded dialog</p>
+                    <p>Alert: this is a dialog.</p>
+                    <menu class="dialog-menu">
+                        <button class="nes-btn">Cancel</button>
+                        <button class="nes-btn is-primary">Confirm</button>
+                    </menu>
+                </form>
+            </dialog>
+        </section>
+    </div>
+</body>
+
+</html>
